@@ -1,0 +1,32 @@
+<Plana numero=1>
+El $trie (també conegut com a arbre de $prefixos) és una $estructura 
+de $dades molt útil per resoldre problemes associats amb $strings. 
+<Plana numero=2>
+El $problema més conegut és donat una col·lecció de $paraules (alguna
+cosa com un $diccionari ) i una $paraula en particular, saber si la 
+ paraula es troba en la $col·lecció de paraules.
+<Plana numero=3>
+Una primera $solució podria ser comparar la paraula buscada a cada 
+paraula, però aquesta solució és $O (n) ja que es necessitarien almenys
+n $comparacions on $n és la $quantitat de paraules en la col·lecció. Quan
+<Plana numero=4>
+tenim massa paraules, aquesta solució és extremadament lenta. Una altra
+possible solució podria ser ordenar totes les paraules alfabèticament i 
+aleshores utilitzar recerca binària per trobar la paraula. Aquesta solució 
+és millor, però té el desavantatge que cada vegada que introduïm una nova
+paraula cal $reordenar la col·lecció completa, el que és O (n log n).
+<Plana numero=5>
+El trie resol aquest problema eficientment, ja que tant afegir com 
+buscar una paraula és O (| s |) on | s | és la quantitat de caràcters de la 
+paraula s. Aquesta estructura va ser introduïda per per Rene de la Briandais
+ i Edward Fredking el 1959. El nom prové de la paraula Retrieval, que significa
+recuperació. Internament, funciona com un arbre ordenat, on cada node representa
+un caràcter d'una paraula inserida en el trie, i els nodes fills d'aquest són 
+<Plana numero=6>
+caràcters que apareixen després de l'en la paraula. L'arrel de l'arbre és el 
+caràcter buit, ja que es pot considerar que aquest apareix al principi de qualsevol paraula.
+<Plana numero=7>
+El trie també és conegut com a arbre de prefixos perquè en inserir una paraula en
+ l'arbre es busca primer el major prefix d'aquesta paraula que ja aquest present 
+ a l'arbre, i a partir d'aquí es continua inserint fins on acabi la paraula. La 
+ figura a continuació mostra un trie construït amb les paraules alguna cosa, ala, abella, i trie.
